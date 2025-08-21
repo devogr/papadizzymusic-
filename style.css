@@ -1,0 +1,400 @@
+/* --- VARIABLES & GLOBAL STYLES --- */
+:root {
+    --primary-color: #ffc107; /* A vibrant gold/yellow */
+    --secondary-color: #f8f9fa;
+    --dark-color: #121212;
+    --medium-dark-color: #1e1e1e;
+    --light-gray-color: #aaa;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --nav-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--light-gray-color);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.header {
+    background-color: rgba(18, 18, 18, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #2a2a2a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--nav-height);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Add this to your style.css file */
+.logo img {
+    height: 100px;       /* Increase height to make logo bigger */
+    max-width: 100%;     /* Ensure it doesn’t overflow container */
+    width: auto;         /* Keep aspect ratio */
+    display: block;      /* Removes extra space below */
+}
+
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('hero.jpg') no-repeat center center/cover;
+    /* This is a placeholder background image. You can replace the URL. */
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero-slogan {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--light-gray-color);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--dark-color);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffd43b;
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+/* --- ABOUT SECTION --- */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--medium-dark-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
+
+.about-content hr {
+    border: 1px solid #2a2a2a;
+    margin: 1.5rem 0;
+}
+
+.about-content strong {
+    color: var(--primary-color);
+}
+
+/* 🎵 Discography Section */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.player {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.player:hover {
+  transform: scale(1.03);
+}
+
+.player-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.track-title {
+  font-size: 16px;
+  flex: 1;
+  font-weight: bold;
+}
+
+.play-btn {
+  background: #ff4757;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.play-btn:hover {
+  background: #ff6b81;
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.progress {
+  flex: 1;
+  cursor: pointer;
+}
+
+.time {
+  font-size: 12px;
+  width: 50px;
+  text-align: right;
+}
+audio {
+  display: none;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.contact-link i {
+    font-size: 1.8rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background-color: var(--medium-dark-color);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.9rem;
+    color: var(--light-gray-color);
+}
+
+/* --- ANIMATIONS --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add staggered delays for a nicer effect */
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.song-item.animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.song-item.animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.song-item.animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.song-item.animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+.song-item.animate-on-scroll:nth-child(5) { transition-delay: 0.5s; }
+.song-item.animate-on-scroll:nth-child(6) { transition-delay: 0.6s; }
+.song-item.animate-on-scroll:nth-child(7) { transition-delay: 0.7s; }
+
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Mobile Navigation */
+    .nav-menu {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%; /* Start off-screen */
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        flex-direction: column;
+        background-color: var(--dark-color);
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        transition: right 0.4s ease-in-out;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 2rem;
+    }
+/* Social Media Icons */
+.social-icons {
+  text-align: center;   /* center icons */
+  margin: 20px 0;
+}
+
+.social-icons a {
+  color: #ffcc00;       /* default color */
+  font-size: 2em;       /* icon size */
+  margin: 0 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;          /* hover color */
+  transform: scale(1.2); /* zoom effect */
+}
+}
+
+
