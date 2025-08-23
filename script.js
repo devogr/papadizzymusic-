@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Load GA script asynchronously
         const gaScript = document.createElement('script');
         gaScript.async = true;
-        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${G-R4DTJGEXW8}`;
         document.head.appendChild(gaScript);
 
         // Initialize GA after script loads
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', GA_MEASUREMENT_ID);
+            gtag('config', G-R4DTJGEXW8);
         };
     })();
 
